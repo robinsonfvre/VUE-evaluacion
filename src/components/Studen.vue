@@ -20,7 +20,7 @@
     <div class="contenido_table">
       <table class="table table-striped table-hover">
         <thead>
-          <tr>
+          <tr id="table">
             <th scope="col">name</th>
             <th scope="col">apellido</th>
             <th scope="col">dni</th>

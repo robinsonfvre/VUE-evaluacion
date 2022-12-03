@@ -19,5 +19,10 @@
 }
 .table{
    width: 95%;
+   background-color: gray;
 
+}
+
+#table{
+    background-color: rgb(255, 200, 0);
 }
