@@ -4,53 +4,47 @@
 <template>
   <div class="container_studens">
 
-   <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand"></a>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" v-model="search" @keyup="filtrar" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit" @click="filtrar" >Search</button>
-    </form>
-  </div>
-</nav>
-    <div class="puntos">
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" v-model="search" @keyup="filtrar" type="search" placeholder="Search"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" @click="filtrar">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="create">
       <p>ALL STUDENS</p>
-      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal_crear">
+        <ion-icon name="create-outline"></ion-icon>
+      </button>
     </div>
     <div class="contenido_table">
-      <table class="table table-striped table-hover">
+      <table class="table table-striped table-hover table-primary">
         <thead>
           <tr id="table">
-            <th scope="col">name</th>
-            <th scope="col">apellido</th>
-            <th scope="col">dni</th>
-            <th scope="col">email</th>
-            <th scope="col">address</th>
-            <th>funciones</th>
+            <th scope="col" class="table-success">NAME</th>
+            <th scope="col" class="table-danger">SURNAME</th>
+            <th scope="col" class="table-warning">DNI</th>
+            <th scope="col" class="table-info">EMAIL</th>
+            <th scope="col" class="table-secondary">ADDRESS</th>
+            <th>FUNCTIONS</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="p in mostrar_datos">
+          <tr v-for="p in mostrar_datos" class="table-bordered border-primary">
             <th>{{ p.name }}</th>
             <td>{{ p.apellido }}</td>
             <td>{{ p.dni }}</td>
             <td>{{ p.email }}</td>
             <td>{{ p.addres }}</td>
             <td>
-              <button
-                type="button"
-                class="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_editar"
-              >
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal_editar">
                 <ion-icon name="create-outline"></ion-icon>
               </button>
-              <button
-                type="button"
-                class="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_eliminar"
-              >
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal_eliminar">
                 <ion-icon name="trash-outline"></ion-icon>
               </button>
             </td>
@@ -58,137 +52,130 @@
         </tbody>
       </table>
     </div>
+
+
   </div>
 
-  <!-- ----------modals--------------- -->
-  <!-- Button trigger modal -->
 
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="modal_editar"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
+  <!-- ---------/////////////////////////////////////-modals------/////////////////////////////////////////////////--------- -->
+
+  <!-- modal_editar -->
+  <div class="modal fade" id="modal_editar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">EDITAR</h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">EDIT</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">name</label>
-              <input
-                v-model="mostrar_datos.name"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <label for="exampleInputEmail1" class="form-label">NAME</label>
+              <input v-model="mostrar_datos.name" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >apellido</label
-              >
-              <input
-                v-model="mostrar_datos.apellido"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <label for="exampleInputEmail1" class="form-label">SURNAME</label>
+              <input v-model="mostrar_datos.apellido" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">dni</label>
-              <input
-                v-model="mostrar_datos.dni"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <label for="exampleInputEmail1" class="form-label">DNI</label>
+              <input v-model="mostrar_datos.dni" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                v-model="mostrar_datos.email"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <label for="exampleInputEmail1" class="form-label">EMAIL ADDRESS</label>
+              <input v-model="mostrar_datos.email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">addres</label>
-              <input
-                v-model="mostrar_datos.addres"
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <label for="exampleInputEmail1" class="form-label">ADDRES</label>
+              <input v-model="mostrar_datos.addres" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            CLOSE
           </button>
           <button type="button" data-bs-dismiss="modal" class="btn btn-primary">
-            editar
+            EDIT
           </button>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="modal_eliminar"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
+
+  <!-- modal crear -->
+  <div class="modal fade" id="modal_crear" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">eliminar</h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">CREATE</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body"><h4>¿deseas eliminar este studiante?</h4></div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">NAME</label>
+              <input v-model="mostrar_datos.name" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">SURNAME</label>
+              <input v-model="mostrar_datos.apellido" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">DNI</label>
+              <input v-model="mostrar_datos.dni" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">EMAIL ADDRESS</label>
+              <input v-model="mostrar_datos.email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">ADDRES</label>
+              <input v-model="mostrar_datos.addres" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+          </form>
+        </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            CLOSE
           </button>
           <button type="button" data-bs-dismiss="modal" class="btn btn-primary">
-            eliminar
+            CREATE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal ELIMINAR-->
+  <div class="modal fade" id="modal_eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">DELETE</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4>¿deseas eliminar este studiante?</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            CLOSE
+          </button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-primary">
+            DELETE
           </button>
         </div>
       </div>
@@ -205,7 +192,7 @@ export default {
       search: "",
     };
   },
-  mounted() {},
+  mounted() { },
 
   created() {
     this.lista_productos = [
@@ -266,9 +253,9 @@ export default {
     filtrar() {
       this.mostrar_datos = this.lista_productos.filter(
         (pro) =>
-          (pro.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1) |
+          (pro.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1) ||
           (pro.dni.toString().indexOf(this.search) > -1)
-          
+
       );
     },
   },

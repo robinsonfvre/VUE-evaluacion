@@ -3,6 +3,12 @@
 @import "../assets/css/cascada.css";
 </style>
 <template>
+     <div class="create">
+      <p>ALL TEACHER</p>
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal_crear">
+        <ion-icon name="create-outline"></ion-icon>
+      </button>
+    </div>
     <div class="container-t">
         
         <div class="card" style="width: 15rem; height: 19rem;">
@@ -13,8 +19,36 @@
                 <p class="card-text">ALBERTO DARIO NIÑO</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
+                        data-bs-whatever="@mdo">REPORTE</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 15rem; height: 19rem;">
+            <img src="../assets/image/depositphotos_13392892-stock-photo-portrait-of-the-thinking-man.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">DOCENTE</p>
+                <p class="card-text">ALBERTO DARIO NIÑO</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
+                        data-bs-whatever="@mdo">REPORTE</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 15rem; height: 19rem;">
+            <img src="../assets/image/depositphotos_13392892-stock-photo-portrait-of-the-thinking-man.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">DOCENTE</p>
+                <p class="card-text">ALBERTO DARIO NIÑO</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -28,7 +62,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -41,8 +75,8 @@
                 <p class="card-text">ALBERTO DARIO NIÑO</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -55,8 +89,8 @@
                 <p class="card-text">ALBERTO DARIO NIÑO</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -69,8 +103,8 @@
                 <p class="card-text">ALBERTO DARIO NIÑO</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -83,36 +117,8 @@
                 <p class="card-text">ALBERTO DARIO NIÑO</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
-                        data-bs-whatever="@mdo">REPORTE</button>
-                </div>
-            </div>
-        </div>
-        <div class="card" style="width: 15rem; height: 19rem;">
-            <img src="../assets/image/depositphotos_13392892-stock-photo-portrait-of-the-thinking-man.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">DOCENTE</p>
-                <p class="card-text">ALBERTO DARIO NIÑO</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
-                        data-bs-whatever="@mdo">REPORTE</button>
-                </div>
-            </div>
-        </div>
-        <div class="card" style="width: 15rem; height: 19rem;">
-            <img src="../assets/image/depositphotos_13392892-stock-photo-portrait-of-the-thinking-man.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">DOCENTE</p>
-                <p class="card-text">ALBERTO DARIO NIÑO</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo">AREAS</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        data-bs-whatever="@mdo">AREA</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reporte"
                         data-bs-whatever="@mdo">REPORTE</button>
                 </div>
             </div>
@@ -151,7 +157,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    GRADO
+                                    DEGREE
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">SEXTO</a></li>
@@ -164,36 +170,36 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">NOMBRES</label>
+                            <label for="recipient-name" class="col-form-label">NAME</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">APELLIDOS</label>
+                            <label for="recipient-name" class="col-form-label">SURNAME</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">TELEFONO</label>
+                            <label for="recipient-name" class="col-form-label">PHONE</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">CORREO</label>
+                            <label for="recipient-name" class="col-form-label">EMAIL</label>
                             <input type="email" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Message:</label>
+                            <label for="message-text" class="col-form-label">REPORT</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary">TO ACCEPT</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="reporte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -216,4 +222,76 @@
             </div>
         </div>
     </div>
+    <!-- MODAL CRATE -->
+    <div class="modal fade" id="modal_crear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">NEW TEACHER</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    AREAS
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">FICISA</a></li>
+                                    <li><a class="dropdown-item" href="#">MATEMATICA</a></li>
+                                    <li><a class="dropdown-item" href="#">ESPAÑOL</a></li>
+                                    <li><a class="dropdown-item" href="#">SOCIALES</a></li>
+                                    <li><a class="dropdown-item" href="#">INGLES</a></li>
+                                    <li><a class="dropdown-item" href="#">QUIMICA</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    DEGREE
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">SEXTO</a></li>
+                                    <li><a class="dropdown-item" href="#">SEPTIMO</a></li>
+                                    <li><a class="dropdown-item" href="#">OCTAVO</a></li>
+                                    <li><a class="dropdown-item" href="#">NOVENO</a></li>
+                                    <li><a class="dropdown-item" href="#">DECIMMO</a></li>
+                                    <li><a class="dropdown-item" href="#">ONCE</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">NAME</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">SURNAME</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">PHONE</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">EMAIL</label>
+                            <input type="email" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">REPORT</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary">TO ACCEPT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </template>
