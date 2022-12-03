@@ -6,6 +6,7 @@
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    overflow: hidden;
 }
 
 nav {
@@ -22,21 +23,23 @@ nav {
 
 
 .main {
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+ display: flex;
+ flex-flow: row;
 }
 
 /* Toggle Styles */
 
 #viewport {
-  padding-left: 250px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+ display: flex;
+ flex-flow: column;
+ flex: .3;
+ height: calc(100vh - 4rem);
 }
-
+.contenido{
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
 #content {
   width: 100%;
   position: relative;
@@ -46,18 +49,21 @@ nav {
 /* Sidebar Styles */
 
 #sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 250px;
+
+ color:white ;
+ 
   height: 100%;
-  margin-left: -250px;
+ 
   overflow-y: auto;
   background: #37474F;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  
+}
+#icono {
+  height: .7rem;
+  align-items: center;
+  display: flex;
+  margin-left: 10px;
+  color: aliceblue;
 }
 
 #sidebar header {
@@ -77,9 +83,7 @@ nav {
   color: #fff;
 }
 
-#sidebar .nav{
-  
-}
+
 
 #sidebar .nav a{
   background: none;
